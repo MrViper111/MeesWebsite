@@ -5,7 +5,7 @@ from app.views import views
 
 def create_app():
     app = Flask(__name__)
-    app.config["SECRET_KEY"] = "f4nf4f3n48904fkkjfkshf2f298323-232-fioefjeio"
+    app.config["SECRET_KEY"] = "f4nf4f3n48904fkkjfkshf2f298323-232-fioefjeio" # really dont care we're not in debug mode
 
     app.register_blueprint(views)
 

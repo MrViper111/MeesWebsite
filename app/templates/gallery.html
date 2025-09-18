@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mees Hall Gallery</title>
+</head>
+<body style="font-family:Arial, sans-serif; margin:0; text-align:center;">
+
+    <div style="background: url('https://www.rose-hulman.edu/campus-life/student-life/housing-and-dining/_assets/images/Spotlight/ResidenceHall-UP-spot-MEES-wide.jpg') no-repeat center; background-size: cover; padding: 50px 0; color: white; font-size: 2em; font-weight: bold;">
+        Mees Hall
+    </div>
+
+    <h2 style="margin:20px 0;">Amazing Photo Gallery</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:10px; padding:10px;">
+        <img src="https://media.discordapp.net/attachments/1410799972802105465/1411527111956762684/IMG_6156.jpg?ex=68ccb590&is=68cb6410&hm=537dbae2c415fd5a5b8f2e2baa13552a9f93d401d53b2fbb409ed7676735effa&=&format=webp&width=2246&height=1263" style="width:100%; cursor:pointer;" onclick="expand(this)">
+        <img src="https://cdn.discordapp.com/attachments/1410799972802105465/1416578347353247825/IMG_7407.jpg?ex=68cca0e4&is=68cb4f64&hm=b0e2ebadabc660a01224a36968772a093d50de70317076776ee145b9cefce6c7&" style="width:100%; cursor:pointer;" onclick="expand(this)">
+        <img src="https://via.placeholder.com/400x250?text=3" style="width:100%; cursor:pointer;" onclick="expand(this)">
+        <img src="https://via.placeholder.com/400x250?text=4" style="width:100%; cursor:pointer;" onclick="expand(this)">
+        <img src="https://via.placeholder.com/400x250?text=5" style="width:100%; cursor:pointer;" onclick="expand(this)">
+    </div>
+
+    <div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;" onclick="closeOverlay()">
+        <img id="overlayImg" src="" style="max-width:90%; max-height:90%;">
+    </div>
+
+    <script>
+    function expand(img) {
+        document.getElementById("overlayImg").src = img.src;
+        document.getElementById("overlay").style.display = "flex";
+    }
+    function closeOverlay() {
+        document.getElementById("overlay").style.display = "none";
+    }
+    </script>
+
+</body>
+</html>
